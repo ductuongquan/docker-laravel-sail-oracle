@@ -31,9 +31,9 @@ services:
         ports:
             - '${FORWARD_DB_PORT:-1521}:1521'
         environment:
-            ORACLE_SID : '${DB_USERNAME}'
-            ORACLE_PWD : '${DB_PASSWORD}'
-            ORACLE_CHARACTERSET : 'AL16UTF8'
+            #ORACLE_SID: '${DB_USERNAME}'
+            ORACLE_PWD: secret
+            ORACLE_CHARACTERSET: AL16UTF8
         volumes:
             - 'sail-oracle:/opt/oracle/oradata'
         networks:
